@@ -23,3 +23,4 @@ stylesheets:
 </div>
 <div class="row justify-content-center align-items-center align-items-sm-center h-25">
   <p class="col-sm-10 col-11 text-white text-center m-30"><strong>The Activities Board Technical Committee</strong>, commonly known as <strong class="text-nowrap">AB Tech</strong>, is the production organization charged with handling the technical production of university-sponsored events at Carnegie Mellon University. We provide high quality, professional grade entertainment production services, including sound reinforcement, lighting design, stage management, power/rigging support, and event management at heavily subsidized rates to the campus community. Our clients include student groups, university administration, and faculty. We also facilitate staging rentals, backline rentals, and more.</p>
+  </div>
