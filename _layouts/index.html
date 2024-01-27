@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}" class="h-100">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    {% if page.title != null %}
+    <title>{{ site.title }}: {{ page.title }}</title>
+    {% else %}
+    <title>{{ site.title }}</title>
+    {% endif %}
+
+    <link rel="stylesheet" href="{{ "/assets/css/default.css" | relative_url }}">
+    {% if page contains "stylesheets" %}{% for style in page.stylesheets %}
+    <link rel="stylesheet" href="{{ style | relative_url }}">
+    {% endfor %}{% endif %}
+    {% if page contains "headScripts" %}{% for script in page.headScripts %}
+    <script type="text/javascript" src="{{ script | relative_url }}"></script>
+    {% endfor %}{% endif %}
+  </head>
+  {% include nav.html %}
+  <body class="d-flex flex-column h-100 align-items-center overflow-auto">
+  
+    <main class="{% if page contains 'main_classes_override' %}{{ page.main_classes_override }}{% else %}flex-shrink-0 flex-grow-1 w-100{% endif %}" role="main">
+      <div class="container content-block d-block mx-auto pb-3">
+        {{ content }}
+        {% include footer.html %}
+      </div>
+    </main>
+
+    <script type="text/javascript" src="{{ "/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" | relative_url }}"></script>
+    {% if page contains "footScripts" %}{% for script in page.footScripts %}
+    <script type="text/javascript" src="{{ script | relative_url }}"></script>
+    {% endfor %}{% endif %}
+  </body>
+</html>

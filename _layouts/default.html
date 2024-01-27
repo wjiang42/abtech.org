@@ -24,7 +24,7 @@
     <main class="{% if page contains 'main_classes_override' %}{{ page.main_classes_override }}{% else %}flex-shrink-0 flex-grow-1 w-100{% endif %}" role="main">
       <div class="container content-block d-block mx-auto pb-3">
         {{ content }}
-        <hr>
+        <hr class="bg-primary">
         {% include footer.html %}
       </div>
     </main>
