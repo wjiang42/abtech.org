@@ -25,9 +25,9 @@
       <div class="container content-block d-block mx-auto pb-3 px-md-4">
         {{ content }}
       </div>
+      {% include footer.html %}
     </main>
 
-    {% include footer.html %}
 
     <script type="text/javascript" src="{{ "/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" | relative_url }}"></script>
     {% if page contains "footScripts" %}{% for script in page.footScripts %}
